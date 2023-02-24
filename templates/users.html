@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fameable ‣ Online Marketing" />
+    <meta property="og:description" content="Online marketing services and resources to make you or your brand famous." />
+    <meta property="og:url" content="https://fameable.com/" />
+    <meta property="og:site_name" content="Fameable" />
+    <meta property="og:updated_time" content="2022-08-19T00:36:34+00:00" />
+    <meta property="og:image" content="https://fameable.com/wp-content/uploads/2015/04/personal-branding-1-1.jpg" />
+    <meta property="og:image:secure_url" content="https://fameable.com/wp-content/uploads/2015/04/personal-branding-1-1.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="768" />
+    <meta property="og:image:alt" content="Personal Branding" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="article:published_time" content="2015-04-02T17:13:59+00:00" />
+    <meta property="article:modified_time" content="2022-08-19T00:36:34+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fameable ‣ Online Marketing" />
+    <meta name="twitter:description" content="Online marketing services and resources to make you or your brand famous." />
+    <meta name="twitter:image" content="https://fameable.com/wp-content/uploads/2015/04/personal-branding-1-1.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="John Quail" />
+    <meta name="twitter:label2" content="Time to read" />
+    <meta name="twitter:data2" content="Less than a minute" />
+    <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+    <meta property="og:image" content="https://ipfs.io/ipfs/QmPfkToHvT2DaAgbEJMG46XvWfEXYo1W3vTcDsg6f2CeAH" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <img src="https://ipfs.io/ipfs/QmPfkToHvT2DaAgbEJMG46XvWfEXYo1W3vTcDsg6f2CeAH"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
