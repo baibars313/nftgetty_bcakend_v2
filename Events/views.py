@@ -42,7 +42,7 @@ def Sales(requst):
         "from_date": "", 
         "to_date": "", 
         "offset": 0, 
-        "limit": 1, 
+        "limit": 200, 
         "disable_total": False, 
     }
     # topic = "ChangeOwnership(uint256, address, address)"
