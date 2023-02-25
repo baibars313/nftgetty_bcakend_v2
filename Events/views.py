@@ -39,7 +39,7 @@ def Sales(requst):
         "address": "0x8783832B3568FC52C5689c06f1350a294EDB4cDa", 
         "topic": "ChangeOwnership(uint256,address,address)", 
         "chain": "mumbai", 
-        "disable_total": False, 
+        "disable_total": True, 
     }
     # topic = "ChangeOwnership(uint256, address, address)"
     result = evm_api.events.get_contract_events(
