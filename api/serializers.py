@@ -31,3 +31,42 @@ class Questionserializer(serializers.ModelSerializer):
 
 
 
+class Rewardserializer(serializers.ModelSerializer):
+    class Meta:
+        model=Reward
+        fields='__all__'
+
+class Locationserializer(serializers.ModelSerializer):
+    class Meta:
+        model=Location
+        fields='__all__'
+
+class Feeserializer(serializers.ModelSerializer):
+    class Meta:
+        model=Fee
+        fields='__all__'
+
+class BaseFeeserializer(serializers.ModelSerializer):
+    class Meta:
+        model=BaseFee
+        fields='__all__'
+# BidUnlist
+
+class BidUnlistserializer(serializers.ModelSerializer):
+    class Meta:
+        model= BidUnlist
+        fields='__all__'
+
+class FeaturedCollectionserializer(serializers.ModelSerializer):
+    class Meta:
+        model= FeaturedCollection
+        fields='__all__'
+
+class Notificationserializer(serializers.ModelSerializer):
+    class Meta:
+        model= Notifications
+        fields='__all__'
+
+
+
+
