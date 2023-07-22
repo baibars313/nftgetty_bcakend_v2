@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'api','import_export','ckeditor',
+    'api','import_export','ckeditor','networking',
 
 ]
 

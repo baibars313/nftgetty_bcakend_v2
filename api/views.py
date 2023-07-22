@@ -19,6 +19,7 @@ import time
 from django.db.models import F
 from web3 import Web3
 
+
 # Create your views here.
 
 import time
@@ -111,6 +112,37 @@ def allItemsauction(request):
         return Response(serialized.data)
     else:
         return Response({"status":"no address proverder"})
+
+# user listing
+
+@api_view(['GET'])
+def AuctionListing(request,user):
+    if request.method=="GET":
+        allob=Items.objects.filter(auction=True,sold=False,expiring__gt=current_time,owner=user)
+        serialized=Itemserializer(allob, many=True)
+        return Response(serialized.data)
+    else:
+        return Response({"status":"no address proverder"})
+
+@api_view(['GET'])
+def LicenseListing(request,user):
+    if request.method=="GET":
+        allob=Items.objects.filter(license=True,sold=False,owner=user)
+        serialized=Itemserializer(allob, many=True)
+        return Response(serialized.data)
+    else:
+        return Response({"status":"no address proverder"})
+
+@api_view(['GET'])
+def SaleListing(request,user):
+    if request.method=="GET":
+        allob=Items.objects.filter(license=False,auction=False,sold=False,owner=user)
+        serialized=Itemserializer(allob, many=True)
+        return Response(serialized.data)
+    else:
+        return Response({"status":"no address proverder"})
+
+# end user listing
 
 @api_view(['GET'])
 def allItemslicense(request):
@@ -501,5 +533,54 @@ def Locations(request):
 
 
 
+@api_view(['GET'])
+def Ranking(request):
+    api_key = "KcjHvykS40BWeFpXqJHG4glWa3c11soOJSojQaic0nZHPiiZYjadkMC2K1KwtuDD"
+
+    collections = collection.objects.all()
+    data = Items.objects.filter(sold=True)
+
+    def crank(add):
+        priceArray = []
+        holdersArray = []
+        for i in data:
+            if i.contract_address == add:
+                price = float(i.price)
+                priceArray.append(price)
+        if len(priceArray) > 0:
+            return [min(priceArray), max(priceArray), sum(priceArray)]
+        else:
+            return []
+
+    ranking = []
+    for i in collections:
+        a = crank(i.contract)
+        chainNames = []
+        if len(a) > 0:
+            chain = i.chainId
+            if chain == 137:
+                chaniName = "Polygon"
+                chainNames.append(chaniName)
+            elif chain == 1:
+                chaniName = "ETH"
+                chainNames.append(chaniName)
+            else:
+                chaniName = "BSC"
+                chainNames.append(chaniName)
+
+            item = {"floor_price": a[0], "max_price": a[1], "volume": a[2], "name": i.name, "avatr": i.avatr, "chainId": i.chainId, "chainNmae": chainNames[0]}
+            ranking.append(item)
+
+    # Sort the ranking list based on the 'volume' key in descending order (highest volume first)
+    ranking = sorted(ranking, key=lambda x: x['volume'], reverse=True)
+
+    return Response(ranking)
+
+
+@api_view(['POST'])
+def RemoveItem(request,pk):
+    item=Items.objects.get(id=pk)
+    item.delete()
+    return Response({'status':'sucessfully removed'})
 
 

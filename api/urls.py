@@ -43,4 +43,9 @@ urlpatterns = [
  path('all_sales/' ,Allsales, name='Allsales' ),
  path('all_auctions/' ,AllAuctions, name='all_auctions' ),
  path('all_aution_bids/' ,BidsAuctions, name='all_bids' ),
+ path('ranking/' ,Ranking, name='ranking' ),
+ path('auctionlisting/<str:user>/' ,AuctionListing, name='all_auctionas' ),
+ path('salelisting/<str:user>/' ,SaleListing, name='all_bidas' ),
+ path('licenselisting/<str:user>/' ,LicenseListing, name='rankinag' ),
+ path('delete/<int:pk>/' ,RemoveItem, name='rankinaag' )
 ]
