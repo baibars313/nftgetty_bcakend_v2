@@ -122,9 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = "/home/tehmasipsen0900/static"
-MEDIA_ROOT = '/home/tehmasipsen0900/nftgett-backend/media/'
-MEDIA_URL = '/media/'
+STATIC_ROOT = "static/"
+MEDIA_ROOT = 'media/'
+MEDIA_URL = 'media/'
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
